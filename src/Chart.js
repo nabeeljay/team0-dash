@@ -1,20 +1,18 @@
 import * as React from 'react';
 import { useTheme } from '@material-ui/core/styles';
 import {
-  LineChart,
-  Line,
   XAxis,
   YAxis,
   Label,
   ResponsiveContainer,
-  AreaChart, Area, CartesianGrid, Tooltip,
+  AreaChart, Area, Tooltip,
 } from 'recharts';
 import Title from './Title';
 
 // Generate Sales Data
-function createData(time, amount) {
-  return { time, amount };
-}
+// function createData(time, amount) {
+//   return { time, amount };
+// }
 
 // const data = [
 //   createData('00:00', 0),
@@ -57,47 +55,12 @@ export default function Chart() {
 
   return (
     <React.Fragment>
-      <Title>6 Month Summary</Title>
-      
-      {/* <ResponsiveContainer className="lc">
-        <LineChart
-          data={data}
-          margin={{
-            top: 16,
-            right: 16,
-            bottom: 0,
-            left: 24,
-          }}
-        >
-          <XAxis dataKey="time" stroke={theme.palette.text.secondary} />
-          <YAxis stroke={theme.palette.text.secondary}>
-            <Label
-              angle={270}
-              position="left"
-              style={{
-                textAnchor: 'middle',
-                fill: theme.palette.text.primary,
-              }}
-            >
-              Spends (₹)
-            </Label>
-          </YAxis>
-          <Line
-            type="monotone"
-            dataKey="amount"
-            stroke={theme.palette.primary.main}
-            dot={false}
-          />
-        </LineChart>
-      </ResponsiveContainer> */}
-
+      <Title>Hi <b>Nabeel</b>, here is your last 6 Month Summary</Title>
       <ResponsiveContainer>
       <AreaChart
-        //width={500}
-        //height={400}
         data={data}
         margin={{
-          top: 16, right: 16, left: 16, bottom: 24,
+          top: 16, right: 16, left: 16, bottom: 0,
         }}
         >
         <XAxis dataKey="name" stroke={theme.palette.text.secondary} />

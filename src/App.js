@@ -20,8 +20,8 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import { mainListItems, secondaryListItems } from './listItems';
 import Chart from './Chart';
-import Deposits from './Deposits';
 import Orders from './Orders';
+import Categories from './Categories';
 
 function Copyright() {
   return (
@@ -167,7 +167,7 @@ export default function Dashboard() {
             noWrap
             className={classes.title}
           >
-            HSBC Prudence
+          <b>HSBC</b> Prudence
           </Typography>
           <IconButton color="inherit">
             <Badge badgeContent={0} color="secondary">
@@ -203,12 +203,18 @@ export default function Dashboard() {
                 <Chart />
               </Paper>
             </Grid>
-            {/* Recent Deposits */}
+            {/* Spending Categories */}
             <Grid item xs={12} md={4} lg={3}>
+              <Paper className={fixedHeightPaper}>
+                <Categories />
+              </Paper>
+            </Grid>
+            {/* Recent Deposits */}
+            {/* <Grid item xs={4} md={4} lg={3}>
               <Paper className={fixedHeightPaper}>
                 <Deposits />
               </Paper>
-            </Grid>
+            </Grid> */}
             {/* Recent Orders */}
             <Grid item xs={12}>
               <Paper className={classes.paper}>
