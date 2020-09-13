@@ -9,27 +9,39 @@ import PeopleIcon from '@material-ui/icons/People';
 import BarChartIcon from '@material-ui/icons/BarChart';
 import LayersIcon from '@material-ui/icons/Layers';
 import AssignmentIcon from '@material-ui/icons/Assignment';
+import { Link } from 'react-router-dom';
+import './listItems.css';
+import LocalLibraryIcon from '@material-ui/icons/LocalLibrary';
+import AccountBalanceIcon from '@material-ui/icons/AccountBalance';
 
 export const mainListItems = (
   <div>
-    <ListItem button>
-      <ListItemIcon>
-        <DashboardIcon />
-      </ListItemIcon>
-      <ListItemText primary="Dashboard" />
-    </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <ShoppingCartIcon />
-      </ListItemIcon>
-      <ListItemText primary="Orders" />
-    </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <PeopleIcon />
-      </ListItemIcon>
-      <ListItemText primary="Customers" />
-    </ListItem>
+
+    <Link to="/home">
+      <ListItem button>
+        <ListItemIcon>
+          <DashboardIcon />
+        </ListItemIcon>
+        <ListItemText primary="Dashboard" />
+      </ListItem>
+    </Link>
+    
+      <ListItem button>
+        <ListItemIcon>
+          <ShoppingCartIcon />
+        </ListItemIcon>
+        <ListItemText primary="Orders" />
+      </ListItem>
+
+      <Link to="/prof">
+      <ListItem button>
+        <ListItemIcon>
+          <PeopleIcon />
+        </ListItemIcon>
+        <ListItemText primary="Profile Data" />
+      </ListItem>
+    </Link>
+
     <ListItem button>
       <ListItemIcon>
         <BarChartIcon />
@@ -48,11 +60,30 @@ export const mainListItems = (
 export const secondaryListItems = (
   <div>
     <ListSubheader inset>Tools</ListSubheader>
+    
+    <Link to="/test">
+      <ListItem button>
+        <ListItemIcon>
+          <AssignmentIcon />
+        </ListItemIcon>
+        <ListItemText primary="Risk Tolerance" />
+      </ListItem>
+    </Link>
+
+    <Link to="/products">
+      <ListItem button>
+        <ListItemIcon>
+          <AccountBalanceIcon />
+        </ListItemIcon>
+        <ListItemText primary="Investments" />
+      </ListItem>
+    </Link>
+
     <ListItem button>
       <ListItemIcon>
-        <AssignmentIcon />
+        <LocalLibraryIcon />
       </ListItemIcon>
-      <ListItemText primary="Risk Appetite" />
+      <ListItemText primary="Your readings" />
     </ListItem>
 
   </div>

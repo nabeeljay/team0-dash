@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {
-    PieChart, Pie, Cell,ResponsiveContainer, Label,
+    PieChart, Pie, Cell,ResponsiveContainer,
   } from 'recharts';
 import Title from './Title';
 
@@ -24,8 +24,8 @@ import Title from './Title';
   
     return (
       <text x={x} y={y} fill="white" textAnchor='middle' dominantBaseline="middle">
-        {/* {`${(percent * 100).toFixed(0)}%`} */}
-        {data[index].name}
+        <tspan >{data[index].name}</tspan>
+        <tspan dx="-25" dy="15">{`${(percent * 100).toFixed(0)}%`}</tspan>
       </text>
     );
   };
@@ -51,12 +51,11 @@ function Categories() {
                     {
                         data.map((entry, index) => <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />)
                     }
-                    <Label nameKey="name" />
+                    {/* <Label nameKey="name" /> */}
                     </Pie>
                 </PieChart>
             </ResponsiveContainer>
         </React.Fragment>
-      
     );
   }
 
