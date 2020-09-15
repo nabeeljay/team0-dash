@@ -1,9 +1,9 @@
-import Chart from './Chart';
-import Orders from './Orders';
-import Categories from './Categories';
+import Chart from '../../componentsUtils/ListItems/Chart.js';
+import Orders from '../Order/Orders.js';
+import Categories from '../../componentsUtils/ListItems/Categories.js';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
-import Paper from '@material-ui/core/Paper';  
+import Paper from '@material-ui/core/Paper';
 import { makeStyles } from '@material-ui/core/styles';
 import clsx from 'clsx';
 import React from 'react'
@@ -127,12 +127,10 @@ function Front() {
               </Paper>
             </Grid>
           </Grid>
-          
+
         </Container>
       </main>
     )
 }
 
 export default Front
-
-    

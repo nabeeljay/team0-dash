@@ -17,9 +17,9 @@ import Paper from '@material-ui/core/Paper';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import NotificationsIcon from '@material-ui/icons/Notifications';
-import { mainListItems, secondaryListItems } from './listItems';
+import { mainListItems, secondaryListItems } from '../../listItems';
 import { Avatar } from '@material-ui/core';
-import Profile from './Profile';
+import Risk from '../Risk/Risk.js';
 
 
 // function Copyright() {
@@ -124,11 +124,11 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
   },
   fixedHeight: {
-    height: 700,
+    height: 600,
   },
 }));
 
-export default function Prof() {
+export default function Test() {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
   const handleDrawerOpen = () => {
@@ -196,11 +196,11 @@ export default function Prof() {
       <main className={classes.content}>
         <div className={classes.appBarSpacer} />
         <Container maxWidth="lg" className={classes.container}>
-          <Grid item xs={12}>
-            <Paper className={fixedHeightPaper}>
-              <Profile />
-            </Paper>
-          </Grid>
+            <Grid item xs={12}>
+              <Paper className={fixedHeightPaper}>
+                <Risk />
+              </Paper>
+            </Grid>
         </Container>
       </main>
     </div>

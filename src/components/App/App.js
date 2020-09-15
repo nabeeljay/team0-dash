@@ -1,10 +1,10 @@
 import React from 'react';
-import Dashboard from'./Dashboard';
+import Dashboard from'../Dashboard/Dashboard.js';
 import {BrowserRouter as Router,Switch,Route} from "react-router-dom";
-import Products from './Products';
-import Test from './Test.js';
-import Prof from './Prof';
-import Doc from './Doc';
+import Products from '../componentsUtils/Products.js';
+import Test from '../Test.js';
+import Prof from '../Prof/Prof.js';
+import Doc from '../../componentsUtils/Doc.js';
 
 function App() {
     return (

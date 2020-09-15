@@ -18,12 +18,12 @@ import Paper from '@material-ui/core/Paper';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import NotificationsIcon from '@material-ui/icons/Notifications';
-import { mainListItems, secondaryListItems } from './listItems';
-import Chart from './Chart';
-import Orders from './Orders';
-import Categories from './Categories';
+import { mainListItems, secondaryListItems } from '../componentsUtils/ListItems/listItem.js';
+import Chart from '../../componentsUtils/ListItems/Chart.js';
+import Orders from '../Order/Orders.js';
+import Categories from '../componentsUtils/Categories.js';
 import { Avatar } from '@material-ui/core';
-import Title from "./Title";
+import Title from "../componentsUtils/Title.js";
 
 
 function Copyright() {
@@ -225,16 +225,16 @@ export default function Dashboard() {
               <Paper height="100">
               <Typography variant="body1"  color="primary">Current Budget -> 20000 &nbsp; Safe to spend per day -> 1587</Typography>
                 <Grid item xs={12} md={4}>
-                
+
                 <span>Test</span>
                 </Grid>
                 <Grid item xs={12} md={4}>
                 {/* <Typography variant="body1" align="center" color="primary">Current Budget -> 20000</Typography> */}
                 {/* <span>Test2</span>
                 </Grid>
-                  
+
                 <Grid item xs={12} md={4}></Grid>
-                
+
               </Paper> */}
             {/* </Grid> */}
 
