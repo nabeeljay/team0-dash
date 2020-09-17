@@ -38,7 +38,7 @@ export default function Products() {
       <AppBar position="relative">
         <Toolbar>
           <Typography variant="h6" color="inherit" noWrap>
-            <b>HSBC</b> Prudence
+            <b></b> Prudence
           </Typography>
         </Toolbar>
       </AppBar>

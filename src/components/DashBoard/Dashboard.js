@@ -22,7 +22,6 @@ import Chart from '../../componentsUtils/Chart.js';
 import Orders from '../Order/Orders.js';
 import Categories from '../../componentsUtils/Categories.js';
 import { Avatar } from '@material-ui/core';
-import Title from "../../componentsUtils/Title.js";
 
 import theme from './theme.js'
 
@@ -79,7 +78,7 @@ export default function Dashboard() {
             noWrap
             className={classes.title}
           >
-          <b>HSBC</b> Prudence
+          <b></b> Prudence
           </Typography>
           <IconButton color="inherit">
             <Badge badgeContent={0} color="secondary">

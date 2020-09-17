@@ -17,7 +17,7 @@ import AccountBalanceIcon from '@material-ui/icons/AccountBalance';
 export const mainListItems = (
   <div>
 
-    <Link to="/home">
+    <Link to="/">
       <ListItem button>
         <ListItemIcon>
           <DashboardIcon />

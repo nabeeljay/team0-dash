@@ -76,7 +76,7 @@ export default function Prof() {
             noWrap
             className={classes.title}
           >
-          <b>HSBC</b> Prudence
+          <b></b> Prudence
           </Typography>
           <IconButton color="inherit">
             <Badge badgeContent={0} color="secondary">
