@@ -1,6 +1,5 @@
 import * as React from 'react';
 import clsx from 'clsx';
-import { makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Drawer from '@material-ui/core/Drawer';
 import AppBar from '@material-ui/core/AppBar';
@@ -16,7 +15,7 @@ import Grid from '@material-ui/core/Grid';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import NotificationsIcon from '@material-ui/icons/Notifications';
-import { mainListItems, secondaryListItems } from './listItems';
+import { mainListItems, secondaryListItems } from '../../componentsUtils/ListItems/listItems.js';
 import { Avatar } from '@material-ui/core';
 
 import Button from '@material-ui/core/Button';
@@ -24,6 +23,7 @@ import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
+import theme from './theme.js'
 
 
 // function Copyright() {
@@ -40,100 +40,9 @@ import CardMedia from '@material-ui/core/CardMedia';
 //   );
 // }
 
-const drawerWidth = 240;
-
-const useStyles = makeStyles((theme) => ({
-  palette: {
-    primary: {
-      main: '#2e7d32',
-    },
-  },
-  root: {
-    display: 'flex',
-  },
-  toolbar: {
-    paddingRight: 24, // keep right padding when drawer closed
-  },
-  toolbarIcon: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'flex-end',
-    padding: '0 8px',
-    ...theme.mixins.toolbar,
-  },
-  appBar: {
-    zIndex: theme.zIndex.drawer + 1,
-    transition: theme.transitions.create(['width', 'margin'], {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.leavingScreen,
-    }),
-    backgroundColor : '#2e7d32',
-  },
-  appBarShift: {
-    marginLeft: drawerWidth,
-    width: `calc(100% - ${drawerWidth}px)`,
-    // width: 33%,
-    transition: theme.transitions.create(['width', 'margin'], {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.enteringScreen,
-    }),
-  },
-  menuButton: {
-    marginRight: 36,
-  },
-  menuButtonHidden: {
-    display: 'none',
-  },
-  title: {
-    flexGrow: 1,
-  },
-  drawerPaper: {
-    position: 'relative',
-    whiteSpace: 'nowrap',
-    width: drawerWidth,
-    transition: theme.transitions.create('width', {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.enteringScreen,
-    }),
-  },
-  drawerPaperClose: {
-    overflowX: 'hidden',
-    transition: theme.transitions.create('width', {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.leavingScreen,
-    }),
-    width: theme.spacing(7),
-    [theme.breakpoints.up('sm')]: {
-      width: theme.spacing(9),
-    },
-  },
-  appBarSpacer: theme.mixins.toolbar,
-  content: {
-    backgroundColor:
-      theme.palette.type === 'light'
-        ? theme.palette.grey[100]
-        : theme.palette.grey[900],
-    flexGrow: 1,
-    height: '100vh',
-    overflow: 'auto',
-  },
-  container: {
-    paddingTop: theme.spacing(4),
-    paddingBottom: theme.spacing(4),
-  },
-  paper: {
-    padding: theme.spacing(2),
-    display: 'flex',
-    overflow: 'auto',
-    flexDirection: 'column',
-  },
-  fixedHeight: {
-    height: 300,
-  },
-}));
 
 export default function Prod() {
-  const classes = useStyles();
+  const classes = theme();
   const [open, setOpen] = React.useState(false);
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -203,7 +112,7 @@ export default function Prod() {
           <Grid container spacing={3}>
 
           </Grid>
-            
+
         </Container>
       </main> */}
       <main>
@@ -214,7 +123,7 @@ export default function Prod() {
               Our recomendations
             </Typography>
             <Typography variant="h5" align="center" color="textSecondary" paragraph>
-              Our cutting edge machine learning models determine what's the right investment strategy for you. Your Risk tolerance level is considered as key criteria 
+              Our cutting edge machine learning models determine what's the right investment strategy for you. Your Risk tolerance level is considered as key criteria
             </Typography>
             <div className={classes.heroButtons}>
               <Grid container spacing={2} justify="center">
@@ -305,7 +214,7 @@ export default function Prod() {
                   </CardActions>
                 </Card>
               </Grid>
-              
+
           </Grid>
         </Container>
       </main>
