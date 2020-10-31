@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import quizQuestions from '../../api/quizQuestions.js';
 import Quiz from '../Quiz/Quiz.js';
 import Result from '../../componentsUtils/Result.js';
-import logo from '../../assets/icon.png';
 import '../App/App.css';
 
 class Risk extends Component {
@@ -123,7 +122,7 @@ class Risk extends Component {
     return (
       <div className="App">
         <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+         
           <h2>Risk Tolerance Quiz</h2>
         </div>
         {this.state.result ? this.renderResult() : this.renderQuiz()}
