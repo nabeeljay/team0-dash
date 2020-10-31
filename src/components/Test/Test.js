@@ -77,7 +77,7 @@ export default function Test() {
             noWrap
             className={classes.title}
           >
-          <b>HSBC</b> Prudence
+          <b>ABC</b> Prudence
           </Typography>
           <IconButton color="inherit">
             <Badge badgeContent={0} color="secondary">
